@@ -1,6 +1,6 @@
 # Sturdy-Octo-Disco-Adding-Sunglasses-for-a-Cool-New-Look
-### NAME: PRAVEEN K
-### REGISTER NO: 212223230153
+### NAME: K.SRISARAN KARTHIK
+### REGISTER NO: 212224230275
 
 Sturdy Octo Disco is a fun project that adds sunglasses to photos using image processing.
 
@@ -39,29 +39,23 @@ import matplotlib.pyplot as plt
 faceImage = cv2.imread('/content/How To Robert Downey Jr Hairstyle at Ryandreher.jpeg')
 plt.imshow(faceImage[:,:,::-1]);plt.title("Face")
 ```
-![image](https://github.com/user-attachments/assets/2dd634f5-bb44-469d-b982-136c4636f9cb)
+<img width="694" height="544" alt="image" src="https://github.com/user-attachments/assets/241099f2-5166-4150-9e5e-6f047925d0d2" />
 
 ```
 faceImage.shape
 ```
-![image](https://github.com/user-attachments/assets/224cd26b-6ed0-44cc-ae55-f1d3c5d167d9)
+<img width="167" height="42" alt="image" src="https://github.com/user-attachments/assets/a51d1cbf-f98a-42c1-9340-b4a82ea7a4ba" />
 
 ```
 glassPNG = cv2.imread('/content/584999937b7d4d76317f5ffd (1).png',-1)
 plt.imshow(glassPNG[:,:,::-1]);plt.title("glassPNG")
 ```
-![image](https://github.com/user-attachments/assets/f790f7f1-258d-45c5-900c-a810328b933d)
-
-```
-glassPNG.shape
-```
-![image](https://github.com/user-attachments/assets/c214ae0f-8ead-4278-bfc9-5fe421f158b1)
-
+<img width="781" height="398" alt="image" src="https://github.com/user-attachments/assets/65275df6-4623-496b-81ab-a5100d2848b1" />
 ```
 glassPNG = cv2.resize(glassPNG,(240,150))
 print("image Dimension ={}".format(glassPNG.shape))
 ```
-![image](https://github.com/user-attachments/assets/e777a615-58e5-4db3-96d8-9d3172c6ee44)
+<img width="312" height="33" alt="image" src="https://github.com/user-attachments/assets/122c4e3f-a969-44e7-9eea-e0ef756e1b72" />
 
 ```
 glassBGR = glassPNG[:,:,0:3]
@@ -71,7 +65,7 @@ plt.figure(figsize=[16,16])
 plt.subplot(121);plt.imshow(glassBGR[:,:,::-1]);plt.title('Sunglass Color channels');
 plt.subplot(122);plt.imshow(glassMask1,cmap='gray');plt.title('Sunglass Alpha channel');
 ```
-![image](https://github.com/user-attachments/assets/bd61b586-69cb-473e-ba1c-e976de7bcd0b)
+<img width="1143" height="208" alt="image" src="https://github.com/user-attachments/assets/1e4cc2a9-6b2c-4543-aa66-7e056cb309a6" />
 
 ```
 faceWithGlassesNaive = faceImage.copy()
@@ -81,7 +75,7 @@ faceWithGlassesNaive[205:355,105:345]=glassBGR
 
 plt.imshow(faceWithGlassesNaive[...,::-1])
 ```
-![image](https://github.com/user-attachments/assets/b39f012a-a800-4315-9b0a-3dc635b81e0c)
+<img width="541" height="371" alt="image" src="https://github.com/user-attachments/assets/862461a8-8764-4cc1-ac6a-058dac215f1a" />
 
 ```
 glassMask = cv2.merge((glassMask1,glassMask1,glassMask1))
@@ -110,7 +104,7 @@ plt.subplot(131);plt.imshow(maskedEye[...,::-1]);plt.title("Masked Eye Region")
 plt.subplot(132);plt.imshow(maskedGlass[...,::-1]);plt.title("Masked Sunglass Region")
 plt.subplot(133);plt.imshow(eyeRoiFinal[...,::-1]);plt.title("Augmented Eye and Sunglass")
 ```
-![image](https://github.com/user-attachments/assets/42a289c7-c773-482e-b0c6-6fc53e78b14d)
+<img width="1383" height="160" alt="image" src="https://github.com/user-attachments/assets/7a810c8a-dd74-44eb-b260-7fc7f410fe5a" />
 
 ```
 # Replace the eye ROI with the output from the previous section
@@ -121,7 +115,7 @@ plt.figure(figsize=[20,20]);
 plt.subplot(121);plt.imshow(faceImage[:,:,::-1]); plt.title("Original Image");
 plt.subplot(122);plt.imshow(faceWithGlassesArithmetic[:,:,::-1]);plt.title("With Sunglasses");
 ```
-![image](https://github.com/user-attachments/assets/b44da584-0a47-4d69-a97f-d45c0929ba84)
+<img width="1102" height="426" alt="image" src="https://github.com/user-attachments/assets/6fc4013f-2796-48ef-b06c-f61ee69eb751" />
 
 ## Result
 Program for adding Sunglasses to a Passport Photo Using OpenCV, Successfully executed
